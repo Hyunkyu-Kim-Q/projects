@@ -44,6 +44,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from datetime import datetime
+import os
 import time
 
 # Set up WebDriver
@@ -77,13 +79,24 @@ def extract_chat_from_html(html):
 
  return "\n\n".join(chat_history)
 
-# Process and save chat
+# Generate a timestamp for the current date
+timestamp = datetime.now().strftime("%d.%m.%Y")
 
+# Initialize file counter
+counter = 1
+filename = f"chat_history.{timestamp}({counter}).txt"
+
+# Check if file already exists, and increment counter if necessary
+while os.path.exists(filename):
+    counter += 1
+    filename = f"chat_history.{timestamp}({counter}).txt"
+
+# Process and save chat to a new file
 chat_text = extract_chat_from_html(page_source)
-with open("chat_history.txt", "w", encoding="utf-8") as file:
- file.write(chat_text)
+with open(filename, "w", encoding="utf-8") as file:
+    file.write(chat_text)
 
-print("Chat history saved to 'chat_history.txt'!")
+print(f"Chat history saved to '{filename}'!")
 
 # Close browser
 time.sleep(3)
