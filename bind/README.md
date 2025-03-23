@@ -44,10 +44,15 @@ Then, go to Windows Command Prompt to check if the IP address of 'www.hqkim.com'
 First I need to configure DNS server in Network setting to static IP address 172.18.68.64.
 
 
-//Final Result
+Final Result
+
+//
 C:\Users\Username>nslookup www.hqkim.com
+
+//
 Server:  ns1.hqkim.com
 Address:  172.18.68.64
 
+//
 Name:    www.hqkim.com
 Address:  172.18.68.64
