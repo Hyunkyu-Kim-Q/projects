@@ -17,15 +17,19 @@ sudo apt install ufw
 ///
 
 First of all, I need to configure forwarders. This allows the DNS server to forward queries that it can't resolve to the assigned DNS server(s).
+
 --- see named.conf.options
 
 Configure a zone file for hqkim.com
+
 --- see db.hqkim.com
 
 Configure a reverse data file for hqkim.com
+
 --- see db.172.18.68.rev
 
 Configure forward/reverse zone file for hqkim.com
+
 --- see named.conf.local
 
 Restart BIND9 service, and check the status.
