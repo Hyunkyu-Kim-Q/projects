@@ -1,20 +1,20 @@
 Configuring a DNS server using Linux
 
-<<<Prerequisites
+/// Prerequisites
 
-1. Bind9
+// Bind9 (Open-source DNS software)
 
 sudo apt install bind9 bind9-utils bind9-doc -y
 
-2. Net-tools
+// Net-tools (Useful network tools in Linux)
 
 sudo apt install net-tools
 
-3. UFW (Uncomplicated Firewall)
+// UFW (Uncomplicated Firewall)
 
 sudo apt install ufw
 
->>>
+///
 
 First of all, I need to configure forwarders. This allows the DNS server to forward queries that it can't resolve to the assigned DNS server(s).
 --- see named.conf.options
@@ -43,7 +43,8 @@ Then, go to Windows Command Prompt to check if the IP address of 'www.hqkim.com'
 
 First I need to configure DNS server in Network setting to static IP address 172.18.68.64.
 
-<Final Result>
+
+//Final Result
 C:\Users\Username>nslookup www.hqkim.com
 Server:  ns1.hqkim.com
 Address:  172.18.68.64
