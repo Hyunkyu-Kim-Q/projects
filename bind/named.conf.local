@@ -1,0 +1,14 @@
+// Provide forward mapping zone for hqkim.com
+
+zone "hqkim.com" {
+  type master;
+  file "/etc/bind/db.hqkim.com";
+};
+
+// Provide reverse mapping zone for the hqkim.com
+// address 68.18.172.in-addr.arpa
+
+zone "68.18.172.in-addr.arpa" {
+  type master;
+  file "/etc/bind/db.172.18.68";
+};

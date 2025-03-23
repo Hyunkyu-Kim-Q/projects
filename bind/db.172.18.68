@@ -1,0 +1,13 @@
+;
+; BIND reverse data file for hqkim.com
+;
+$TTL 1D
+@        IN        SOA  ns1.hqkim.com. admin.hqkim.com. (
+                        2025032301 ; serial
+                        30800      ; refresh
+                        7200       ; retry
+                        604800     ; expire
+                        300 )      ; minimum
+;
+@        IN        NS    ns1.hqkim.com.
+64       IN        PTR   ns1.hqkim.com.
