@@ -8,12 +8,17 @@
 
 * [BeautifulSoup4](#downloading-beautifulsoup4) - BeautifulSoup will be used to parse HTML and save the chat into a file.
 
+
 ---
+
+# Installation
 
 ## Downloading python venv
 ```
 sudo apt install python3.12-venv
 ```
+Let's install python on your machine.
+
 
 ## Activating virtual environment
 ```py
