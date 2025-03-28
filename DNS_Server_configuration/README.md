@@ -138,13 +138,13 @@ zone "68.18.172.in-addr.arpa" {
 
 Restart BIND9 service and check the status.
 
-```
+```Bash
 sudo systemctl restart bind9
 sudo systemctl status bind9
 ```
 
 Using UFW, allow bind 9 to access.
-```
+```Bash
 sudo ufw status
 sudo ufw enable
 sudo ufw allow bind9
@@ -152,14 +152,14 @@ sudo ufw allow bind9
 
 Change the primary DNS server to static IP address 172.18.68.64.
 
-```PS
+```Powershell
 Get-NetAdapter
 Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses "172.18.68.64"
 ```
 
 ## Result
 
-```
+```Powershell
 C:\Users\Username>nslookup www.hqkim.com
 
 Server:  ns1.hqkim.com
